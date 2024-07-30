@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
+---
+version: '1.0'
+nodes:
+  - name: Site
+    namespace: Location
+    inherit_from: ["LocationGeneric"]
+    include_in_menu: true
+    menu_placement: "LocationGeneric"
+    label: Site
+    display_labels:
+      - name__value
+    # parent: "LocationMetro"
+    children: "LocationRack"
+    icon: "ri:building-line"
+    attributes:
+      - name: facility_id
+        kind: Text
+        unique: false
+        optional: True
+        order_weight: 1100
+      - name: physical_address
+        kind: Text
+        unique: false
+        optional: True
+        order_weight: 1500
+    relationships:
+      - name: owner
+        peer: ThirdpartyGeneric
+        optional: true
+        cardinality: one
+  - name: Rack
+    namespace: Location
+    inherit_from: ["LocationGeneric"]
+    include_in_menu: true
+    label: Rack
+    default_filter: shortname__value
+    display_labels:
+      - name__value
+    menu_placement: "LocationGeneric"
+    parent: "LocationSite"
+    children: ""
+    icon: "clarity:rack-server-line"
+    attributes:
+      - name: facility_id
+        kind: Text
+        unique: false
+        optional: True
+        order_weight: 1100
+    relationships:
+      - name: owner
+        peer: ThirdpartyGeneric
+        optional: true
+        cardinality: one
+
+extensions:
+  nodes:
+    - kind: ThirdpartyProvider
+      relationships:
+        - name: location
+          peer: LocationSite
+          cardinality: many
+          optional: true
