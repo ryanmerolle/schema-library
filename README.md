@@ -12,3 +12,22 @@
 -[ ] For location the fact that the tree between simple and extended forces us to create 2 different extensions
 -[ ] We can't add a "parent" statement in "extensions" section
 -[ ] Putting enum (status, roles ...) in generics prevents users from editing ...
+
+## Progress
+
+-[x] Circuit
+-[x] Dcim
+-[ ] Ipam
+-[ ] Location
+-[ ] Organization
+
+-[ ] Bgp
+-[ ] Lag
+-[ ] location_extended
+-[ ] location_minimal
+-[ ] qinq
+-[ ] tenancy
+-[ ] vrf
+
+-[ ] peering
+-[ ] topology
