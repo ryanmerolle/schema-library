@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
 ---
-version: '1.0'
+version: "1.0"
 generics:
   - name: Generic
-    namespace: Thirdparty #TODO: find something better here => Vendor, contractor ...
-    label: Third Party
-    description: An third Party represent a legal entity, a company.
+    namespace: Organization #TODO: find something better here => Vendor, contractor ...
+    label: Organization
+    description: An organization represent a legal entity, a company.
     default_filter: name__value
     icon: mdi:domain
     include_in_menu: true
@@ -28,7 +28,7 @@ generics:
 
 nodes:
   - name: Manufacturer
-    namespace: Thirdparty
+    namespace: Organization
     description: Device Manufacturer
     default_filter: name__value
     order_by: [name__value]
@@ -36,9 +36,9 @@ nodes:
       - name__value
     icon: mdi:domain
     inherit_from:
-      - ThirdpartyGeneric
+      - OrganizationGeneric
     include_in_menu: true
-    menu_placement: ThirdpartyGeneric
+    menu_placement: OrganizationGeneric
     relationships:
       - name: device_type
         peer: DcimDeviceType
@@ -49,7 +49,7 @@ nodes:
         cardinality: many
         optional: true
   - name: Provider
-    namespace: Thirdparty
+    namespace: Organization
     description: Circuit or Location Provider
     default_filter: name__value
     order_by: [name__value]
@@ -57,9 +57,9 @@ nodes:
       - name__value
     icon: mdi:domain
     inherit_from:
-      - ThirdpartyGeneric
+      - OrganizationGeneric
     include_in_menu: true
-    menu_placement: ThirdpartyGeneric
+    menu_placement: OrganizationGeneric
     relationships:
       - name: circuit
         peer: CircuitCircuit

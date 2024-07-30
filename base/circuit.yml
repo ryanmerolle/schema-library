@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
-version: '1.0'
+version: "1.0"
 nodes:
   # --------------------  Circuits  --------------------
   - name: Circuit
@@ -59,7 +59,7 @@ nodes:
             color: "#85db9b"
     relationships:
       - name: provider
-        peer: ThirdpartyProvider
+        peer: OrganizationProvider
         optional: false
         cardinality: one
         kind: Attribute

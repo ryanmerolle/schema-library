@@ -1,4 +1,4 @@
-version: '1.0'
+version: "1.0"
 nodes:
   # --------------------  IPAM (VLAN, Prefix, IP Address)  --------------------
   - name: IPAddress
@@ -136,7 +136,7 @@ nodes:
             color: "#CDB4DB"
     relationships:
       - name: organization
-        peer: ThirdpartyGeneric
+        peer: OrganizationGeneric
         optional: true
         cardinality: one
         kind: Attribute

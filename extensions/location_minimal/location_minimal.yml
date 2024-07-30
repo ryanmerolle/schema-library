@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
 ---
-version: '1.0'
+version: "1.0"
 nodes:
   - name: Site
     namespace: Location
@@ -26,7 +26,7 @@ nodes:
         order_weight: 1500
     relationships:
       - name: owner
-        peer: ThirdpartyGeneric
+        peer: OrganizationGeneric
         optional: true
         cardinality: one
   - name: Rack
@@ -49,13 +49,13 @@ nodes:
         order_weight: 1100
     relationships:
       - name: owner
-        peer: ThirdpartyGeneric
+        peer: OrganizationGeneric
         optional: true
         cardinality: one
 
 extensions:
   nodes:
-    - kind: ThirdpartyProvider
+    - kind: OrganizationProvider
       relationships:
         - name: location
           peer: LocationSite
