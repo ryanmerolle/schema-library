@@ -20,13 +20,13 @@ Base
 -[x] Dcim
 -[x] Ipam
 -[x] Location
--[ ] Organization
+-[x] Organization
 
 Extensions
 -[ ] Bgp
 -[ ] Lag
--[ ] location_extended
--[ ] location_minimal
+-[x] location_extended
+-[x] location_minimal
 -[ ] qinq
 -[ ] tenancy
 -[x] vrf
