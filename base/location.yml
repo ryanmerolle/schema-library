@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
 ---
-version: '1.0'
+version: "1.0"
 generics:
   - name: Generic
     namespace: Location
@@ -51,4 +51,3 @@ generics:
         kind: Attribute
         optional: true
         cardinality: many
-
