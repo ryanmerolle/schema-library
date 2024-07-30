@@ -184,7 +184,7 @@ nodes:
 
 extensions:
   nodes:
-    - kind: GenericDevice
+    - kind: DcimGenericDevice
       relationships:
         - name: asn
           peer: InfraAutonomousSystem

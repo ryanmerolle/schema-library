@@ -137,7 +137,7 @@ nodes:
         cardinality: one
         kind: Attribute
       - name: devices
-        peer: InfraGenericDevice
+        peer: DcimGenericDevice
         optional: true
         cardinality: many
         kind: Component
@@ -261,7 +261,7 @@ nodes:
     relationships:
       - name: device_type
         label: Type
-        peer: InfraDeviceType
+        peer: DcimDeviceType
         optional: true
         cardinality: one
         kind: Attribute
@@ -406,7 +406,7 @@ nodes:
 
 extensions:
   nodes:
-    - kind: GenericDevice
+    - kind: DcimGenericDevice
       relationships:
         - name: topology
           peer: TopologyTopology
