@@ -4,7 +4,7 @@ version: "1.0"
 nodes:
   # -------------------- VRF & RouteTarget --------------------
   - name: VRF
-    namespace: Ipam
+    namespace: Ipam #TODO: Is IPAM the right namespace here?
     description: "A VRF is isolated layer three domain"
     label: "VRF"
     icon: "mdi:router"

@@ -15,19 +15,22 @@
 
 ## Progress
 
+Base
 -[x] Circuit
 -[x] Dcim
--[ ] Ipam
+-[x] Ipam
 -[ ] Location
 -[ ] Organization
 
+Extensions
 -[ ] Bgp
 -[ ] Lag
 -[ ] location_extended
 -[ ] location_minimal
 -[ ] qinq
 -[ ] tenancy
--[ ] vrf
+-[x] vrf
 
+Experimental
 -[ ] peering
 -[ ] topology
