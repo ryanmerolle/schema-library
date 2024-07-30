@@ -23,14 +23,20 @@ Base
 -[x] Organization
 
 Extensions
--[ ] Bgp
--[ ] Lag
+-[x] bgp
+-[x] lag
 -[x] location_extended
 -[x] location_minimal
 -[ ] qinq
--[ ] tenancy
+-[x] tenancy
 -[x] vrf
 
 Experimental
 -[ ] peering
 -[ ] topology
+-[ ] security
+
+Next
+-[ ] dns
+-[ ] dhcp
+-[ ] ntp
