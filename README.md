@@ -1,5 +1,27 @@
 # Schema Library
 
+## Quick start
+
+1. Create a branch
+
+```console
+infrahubctl branch create testing-schema-library
+```
+
+2. Load base schema
+
+```console
+infrahubctl schema load --branch testing-schema-library base/
+```
+
+3. Then pick and load extensions that fit your use case
+
+```console
+infrahubctl schema load --branch testing-schema-library extensions/location_minimal
+infrahubctl schema load --branch testing-schema-library extensions/vrf
+infrahubctl schema load --branch testing-schema-library extensions/bgp
+```
+
 ## Main changes
 
 - Split "Infra" namespace with proper DCIM / IPAM
