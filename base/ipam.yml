@@ -75,7 +75,7 @@ nodes:
             color: "#a0b78d"
     relationships:
       - name: location
-        peer: LocationGeneric
+        peer: LocationHosting
         optional: true
         cardinality: one
         kind: Attribute
@@ -142,7 +142,7 @@ nodes:
         kind: Attribute
         order_weight: 1200
       - name: location
-        peer: LocationGeneric
+        peer: LocationHosting
         optional: true
         cardinality: one
         kind: Attribute

@@ -46,7 +46,7 @@ generics:
     relationships:
       - name: location
         label: Location
-        peer: LocationGeneric
+        peer: LocationHosting
         optional: false
         cardinality: one
         kind: Attribute
