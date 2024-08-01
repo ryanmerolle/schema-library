@@ -4,11 +4,11 @@ version: "1.0"
 generics:
   - name: Generic
     namespace: Location
-    description: "Generic Location."
+    description: "Generic Location, could be a country, city ..."
     label: "Location"
     icon: "mingcute:location-line"
     include_in_menu: true
-    hierarchical: True
+    hierarchical: true
     default_filter: shortname__value
     order_by:
       - name__value
@@ -26,10 +26,18 @@ generics:
         kind: Text
         optional: true
         order_weight: 1200
-      - name: timezone
-        kind: Text
+    relationships:
+      - name: tags
+        peer: BuiltinTag
+        kind: Attribute
         optional: true
-        order_weight: 1300
+        cardinality: many
+
+  - name: Hosting
+    namespace: Location
+    description: "Location directly hosting device."
+    include_in_menu: false
+    # This is only owning relationships toward various assets that could be found on those locations
     relationships:
       - name: prefixes
         label: Prefixes
@@ -46,8 +54,3 @@ generics:
         peer: DcimGenericDevice
         cardinality: many
         optional: true
-      - name: tags
-        peer: BuiltinTag
-        kind: Attribute
-        optional: true
-        cardinality: many
