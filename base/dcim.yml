@@ -400,7 +400,7 @@ nodes:
       - name: l2_mode
         label: Layer2 Mode
         kind: Text
-        enum: ["Access", "Trunk"]
+        enum: ["Access", "Trunk", "Tunnel"]
         order_weight: 1250
     relationships:
       - name: untagged_vlan
