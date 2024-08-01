@@ -54,6 +54,9 @@ Extensions
 - [ ] qinq
 - [x] tenancy
 - [x] vrf
+- [ ] mlag
+- [ ] virtualization
+- [ ] clustering
 
 Experimental
 
