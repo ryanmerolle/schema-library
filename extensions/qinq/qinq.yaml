@@ -12,5 +12,15 @@ extensions:
           label: Provider tag
           peer: IpamVLAN
           optional: true
+          direction: inbound
+          identifier: vlan__qinq
           cardinality: one
+          kind: Attribute
+        - name: customer_tag
+          label: Customer tag(s)
+          peer: IpamVLAN
+          optional: true
+          direction: outbound
+          identifier: vlan__qinq
+          cardinality: many
           kind: Attribute
