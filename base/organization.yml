@@ -60,8 +60,3 @@ nodes:
       - OrganizationGeneric
     include_in_menu: true
     menu_placement: OrganizationGeneric
-    relationships:
-      - name: circuit
-        peer: CircuitCircuit
-        cardinality: many
-        optional: true
