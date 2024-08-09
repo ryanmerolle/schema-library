@@ -8,16 +8,16 @@ extensions:
   nodes:
     - kind: IpamVLAN
       relationships:
-        - name: provider_tag
-          label: Provider tag
+        - name: svlan
+          label: Supplier vlan
           peer: IpamVLAN
           optional: true
           direction: inbound
           identifier: vlan__qinq
           cardinality: one
           kind: Attribute
-        - name: customer_tag
-          label: Customer tag(s)
+        - name: cvlan
+          label: Customer vlan(s)
           peer: IpamVLAN
           optional: true
           direction: outbound
