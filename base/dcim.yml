@@ -241,7 +241,8 @@ nodes:
         order_weight: 1200
       - name: height
         label: "Height (U)"
-        optional: true
+        optional: false
+        default_value: 1
         kind: Number
         order_weight: 1400
       - name: full_depth
@@ -335,6 +336,11 @@ nodes:
       - "CoreArtifactTarget"
       - "DcimGenericDevice"
     attributes:
+      - name: position
+        label: Position (U)
+        description: Lowest unit.
+        kind: Number
+        optional: true
       - name: role
         kind: Dropdown
         optional: true
@@ -359,6 +365,10 @@ nodes:
             label: Leaf Switch
             description: "Top of Rack part of a Fabric."
             color: "#e6e6fa"
+          - name: tor
+            label: Tor Switch
+            description: "Tor switch part of a Fabric."
+            color: "#e8e7fd"
         order_weight: 1400
   - name: InterfaceL3
     namespace: Dcim

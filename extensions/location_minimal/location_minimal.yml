@@ -62,7 +62,7 @@ nodes:
 
   - name: Rack
     namespace: Location
-    inherit_from: ["LocationGeneric", "LocationHosting"]
+    inherit_from: ["LocationGeneric", "LocationHosting", "CoreArtifactTarget"]
     include_in_menu: true
     label: Rack
     display_labels:
@@ -76,6 +76,12 @@ nodes:
         unique: false
         optional: true
         order_weight: 1100
+      - name: height
+        label: Height (U)
+        optional: false
+        default_value: 42
+        kind: Number
+        order_weight: 1300
     relationships:
       - name: owner
         peer: OrganizationGeneric
