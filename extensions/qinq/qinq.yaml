@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
+---
+version: "1.0"
+
+# TODO: Override L2 interface to add trunnel option for l2 mode
+
+extensions:
+  nodes:
+    - kind: IpamVLAN
+      relationships:
+        - name: svlan
+          label: Supplier vlan
+          peer: IpamVLAN
+          optional: true
+          direction: inbound
+          identifier: vlan__qinq
+          cardinality: one
+          kind: Attribute
+        - name: cvlan
+          label: Customer vlan(s)
+          peer: IpamVLAN
+          optional: true
+          direction: outbound
+          identifier: vlan__qinq
+          cardinality: many
+          kind: Attribute
