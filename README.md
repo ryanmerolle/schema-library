@@ -34,6 +34,7 @@
 - [ ] For location the fact we have three (parent/child) forces us to create 2 different extensions
 - [ ] We can't add a "parent" statement in "extensions" section
 - [ ] Putting enum (status, roles ...) in generics prevents users from editing ...
+- [x] Should we split virtualization? e.g. clustering and hypervisors? Otherwise people doing only clusters (e.g. k8 ...) will have hypervisors and people doing only hypervisors will see clusters/nodes ...
 
 ## Progress
 
@@ -51,12 +52,12 @@ Extensions
 - [x] lag
 - [x] location_extended
 - [x] location_minimal
-- [ ] qinq
+- [x] qinq
 - [x] tenancy
 - [x] vrf
 - [ ] mlag
-- [ ] virtualization
-- [ ] clustering
+- [x] virtualization
+- [x] clustering
 
 Experimental
 
