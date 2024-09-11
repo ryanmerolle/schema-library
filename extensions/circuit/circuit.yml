@@ -124,6 +124,40 @@ nodes:
         optional: false
         cardinality: one
         kind: Parent
+  - name: ProviderNetwork
+    namespace: Circuit
+    description: "Represent the boundary of a provider network, the details of which are unknown or unimportant"
+    label: "Provider Network"
+    icon: "mdi:cloud"
+    menu_placement: "CircuitCircuit"
+    default_filter: name__value
+    order_by:
+      - name__value
+    display_labels:
+      - name__value
+    attributes:
+      - name: name
+        kind: Text
+        unique: true
+      - name: description
+        kind: Text
+        optional: true
+      - name: vendor_id
+        kind: Text
+        optional: true
+    inherit_from:
+      - "DcimEndpoint"
+    relationships:
+      - name: provider
+        peer: OrganizationProvider
+        optional: false
+        cardinality: one
+        kind: Attribute
+      - name: tags
+        peer: BuiltinTag
+        optional: true
+        cardinality: many
+        kind: Attribute
 
 extensions:
   nodes:
