@@ -89,6 +89,7 @@ nodes:
     menu_placement: VirtualizationCluster
     inherit_from:
       - DcimGenericDevice
+      - DcimPhysicalDevice
     attributes: []
     relationships:
       - name: cluster
