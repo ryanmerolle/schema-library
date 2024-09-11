@@ -341,6 +341,7 @@ nodes:
         description: Lowest unit.
         kind: Number
         optional: true
+        order_weight: 1500
       - name: role
         kind: Dropdown
         optional: true
