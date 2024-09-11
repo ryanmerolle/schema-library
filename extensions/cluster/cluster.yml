@@ -8,7 +8,7 @@ nodes:
     description: A cluster hosting virtual machines.
     icon: mdi:dots-hexagon
     inherit_from:
-      - DcimHostVirtualMachine
+      - VirtualizationHostVirtualMachine
     default_filter: name__value
     order_by:
       - name__value
