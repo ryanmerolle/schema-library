@@ -5,21 +5,10 @@ nodes:
   - name: Tenant
     namespace: Tenancy
     description: A tenant is owning the corresponding entity
-    default_filter: name__value
-    order_by: [name__value]
-    display_labels:
-      - name__value
     icon: mdi:domain
     include_in_menu: true
-    attributes:
-      - name: name
-        kind: Text
-        unique: true
-        order_weight: 1000
-      - name: description
-        kind: Text
-        optional: true
-        order_weight: 1200
+    inherit_from:
+      - OrganizationGeneric
     relationships:
       - name: tags
         peer: BuiltinTag

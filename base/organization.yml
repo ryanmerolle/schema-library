@@ -7,6 +7,9 @@ generics:
     label: Organization
     description: An organization represent a legal entity, a company.
     default_filter: name__value
+    order_by: [name__value]
+    display_labels:
+      - name__value
     icon: mdi:domain
     include_in_menu: true
     attributes:
@@ -30,10 +33,6 @@ nodes:
   - name: Manufacturer
     namespace: Organization
     description: Device Manufacturer
-    default_filter: name__value
-    order_by: [name__value]
-    display_labels:
-      - name__value
     icon: mdi:domain
     inherit_from:
       - OrganizationGeneric
@@ -51,10 +50,6 @@ nodes:
   - name: Provider
     namespace: Organization
     description: Circuit or Location Provider
-    default_filter: name__value
-    order_by: [name__value]
-    display_labels:
-      - name__value
     icon: mdi:domain
     inherit_from:
       - OrganizationGeneric
