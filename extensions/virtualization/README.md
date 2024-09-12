@@ -1,11 +1,15 @@
 # Virtualization schema extension
 
-This schema extension contains models for VMs. You might consider Cluster or/and Hypervisor extension to go with!
+This schema extension contains models for Firewall Policer. You might consider some other QoS and Security extensions to go with it!
 
 ## Nodes
 
-- SecurityPolicer
+- VirtualMachine
 
 ## Generics
 
-## Dependancies
+- HostVirtualMachine
+
+## Dependencies
+
+- Base
