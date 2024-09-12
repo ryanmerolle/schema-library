@@ -1,4 +1,4 @@
-# Virtualization schema extension
+# VRRP schema extension
 
 This schema extension contains models for VRRP.
 
