@@ -4,12 +4,8 @@ This schema extension contains models for VMs. You might consider Cluster or/and
 
 ## Nodes
 
-- VirtualMachine
+- SecurityPolicer
 
 ## Generics
 
-- HostVirtualMachine
-
 ## Dependancies
-
-- Base
