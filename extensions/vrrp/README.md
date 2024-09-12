@@ -9,8 +9,7 @@ This schema extension contains models for VRRP.
 
 ## Generics
 
-- HostVirtualMachine
+## Dependencies
 
-## Dependancies
-
-- Base
+- DCIM
+- IPAM
