@@ -25,7 +25,6 @@ nodes:
           - name: esxi
             label: ESXi
             color: "#8ae2ff"
-      - name: version #TODO: see if it's useful ...
-        kind: Text
-        optional: true
-        description: Version of the hypervisor.
+          - name: proxmox
+            label: ProxMox
+            color: "#ba12ee"

@@ -1,4 +1,4 @@
-# BGP schema extension
+# 🧩 BGP
 
 This schema extension contains all you need to modelize your BGP platform!
 
@@ -8,6 +8,6 @@ This schema extension contains all you need to modelize your BGP platform!
 - BGPPeerGroup
 - BGPSession
 
-## Dependancies
+## Dependencies
 
 - Base

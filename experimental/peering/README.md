@@ -7,6 +7,6 @@ This schema extension contains all you need to modelize anything revolving aroun
 - ExchangePoint
 - ...
 
-## Dependancies
+## Dependencies
 
 - Extensions.BGP
