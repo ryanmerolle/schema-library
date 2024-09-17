@@ -1,4 +1,4 @@
-# 🧩 Cluster
+# 🧩 Hypervisor
 
 This schema extension contains all you need to modelize your hypervisors!
 
