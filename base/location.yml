@@ -10,6 +10,8 @@ generics:
     include_in_menu: true
     hierarchical: true
     default_filter: shortname__value
+    human_friendly_id:
+      - shortname__value
     order_by:
       - name__value
     display_labels:
