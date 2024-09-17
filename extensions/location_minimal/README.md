@@ -9,6 +9,6 @@ This schema extension is minimal but will provide you with basic items to store 
 - Site
 - Rack
 
-## Dependancies
+## Dependencies
 
 - Base

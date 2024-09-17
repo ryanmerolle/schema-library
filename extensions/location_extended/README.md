@@ -13,6 +13,6 @@ This schema extension is the most detailed when it comes to location, you'll fin
 - Suite
 - Rack
 
-## Dependancies
+## Dependencies
 
 - Base

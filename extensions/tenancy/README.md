@@ -6,7 +6,7 @@ This schema extension introduces tenancy for some of the schema nodes (circuits.
 
 - Tenant
 
-## Dependancies
+## Dependencies
 
 - Base
 - Circuit

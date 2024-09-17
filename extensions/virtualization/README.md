@@ -10,6 +10,6 @@ This schema extension contains models for VMs. You might consider Cluster or/and
 
 - HostVirtualMachine
 
-## Dependancies
+## Dependencies
 
 - Base

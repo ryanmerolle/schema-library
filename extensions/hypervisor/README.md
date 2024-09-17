@@ -6,7 +6,7 @@ This schema extension contains all you need to modelize your hypervisors!
 
 - Hypervisor
 
-## Dependancies
+## Dependencies
 
 - Base
 - Virtualization

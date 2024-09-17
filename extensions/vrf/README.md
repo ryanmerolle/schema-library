@@ -7,6 +7,6 @@ This schema extension contains models to support VRF in your network.
 - VRF
 - RouteTarget
 
-## Dependancies
+## Dependencies
 
 - Base

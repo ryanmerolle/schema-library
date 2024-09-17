@@ -9,6 +9,6 @@ This schema extension contains Circuits and ways to connect them with your infra
 - Endpoint
 - ProviderNetwork
 
-## Dependancies
+## Dependencies
 
 - Base

@@ -7,7 +7,7 @@ This schema extension contains all you need to modelize your clusters!
 - Cluster
 - Cluster Nodes
 
-## Dependancies
+## Dependencies
 
 - Base
 - Virtualization
