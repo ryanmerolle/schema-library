@@ -1,0 +1,111 @@
+# yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
+---
+version: '1.0'
+
+nodes:
+  - name: Class
+    namespace: User
+    description: "User class"
+    label: "User Class"
+    icon: "iconoir:group"
+    menu_placement: "UserName"
+    display_labels:
+      - name__value
+    order_by:
+      - name__value
+    uniqueness_constraints:
+      - ["name__value"]
+    human_friendly_id:
+      - name__value
+    include_in_menu: true
+    attributes:
+      - name: name
+        kind: Text
+        description: "The unique name of the user class"
+        order_weight: 1000
+      - name: idle_timeout
+        kind: Number
+        label: Idle Timeout (s)
+        description: "Idle timeout in seconds before the user session expires"
+        default_value: 300
+        order_weight: 1500
+      - name: permissions
+        kind: Dropdown
+        optional: false
+        order_weight: 1200
+        choices:
+          - name: admin
+            description: "All rights on device."
+            color: "#A9CCE3"  # pastel blue
+          - name: operator
+            description: "Operator permissions with limited write access."
+            color: "#AED6F1"  # light blue
+          - name: read-only
+            description: "Read only right on configuration."
+            color: "#AFC7F2"  # pastel cornflower blue
+
+  - name: Name
+    namespace: User
+    description: "User login and authentication"
+    label: "User Name"
+    icon: "iconoir:group"
+    display_labels:
+      - name__value
+    order_by:
+      - name__value
+    uniqueness_constraints:
+      - ["name__value"]
+      - ["uid__value"]
+    human_friendly_id:
+      - name__value
+    include_in_menu: true
+    attributes:
+      - name: name
+        label: Username
+        kind: Text
+        optional: false
+        description: "The login username"
+        order_weight: 1000
+      - name: full_name
+        kind: Text
+        optional: true
+        description: "Full name of the user"
+        order_weight: 1100
+      - name: ssh_key
+        kind: Password
+        optional: true
+        description: "SSH key for secure access"
+        order_weight: 1300
+      - name: password
+        kind: Password
+        optional: true
+        description: "Password for login (alternative to SSH key)"
+        order_weight: 1400
+      - name: mfa_enabled
+        kind: Boolean
+        default_value: false
+        description: "Whether multi-factor authentication is enabled"
+        order_weight: 1500
+    relationships:
+      - name: user_class
+        peer: UserClass
+        cardinality: one
+        optional: false
+        kind: Attribute
+        order_weight: 1200
+      - name: organization
+        peer: OrganizationGeneric
+        cardinality: one
+        optional: False
+        kind: Parent
+
+extensions:
+  nodes:
+    # Organization Extensions
+    - kind: OrganizationGeneric
+      relationships:
+        - name: users
+          kind: Component
+          peer: UserName
+          description: "List of users under this organization"
+          cardinality: many
