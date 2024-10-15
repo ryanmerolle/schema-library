@@ -2,8 +2,8 @@
 
 Welcome to the Schema Library for Infrahub. This repository contains a collection of schemas that are designed to streamline and standardize infrastructure-related data structures.
 
-> [!NOTE]
-> Status: Experimental 🚧 This project is currently in an experimental phase and is subject to significant changes. The schemas may evolve, and backward compatibility is not guaranteed. Use with caution in production environments, and expect potential breaking changes as we iterate and improve.
+> [!WARNING]
+> 🚧 This project is currently in an experimental phase and is subject to significant changes. The schemas may evolve, and backward compatibility is not guaranteed. Use with caution in production environments, and expect potential breaking changes as we iterate and improve.
 
 ## Getting Started
 
