@@ -83,6 +83,11 @@ generics:
         kind: Number
         optional: true
         order_weight: 1500
+      - name: serial
+        label: serial
+        kind: Text
+        optional: true
+        order_weight: 1500
     relationships:
       - name: device_type
         peer: DcimDeviceType
@@ -345,9 +350,9 @@ nodes:
     icon: clarity:network-switch-solid
     namespace: Dcim
     inherit_from:
-      - CoreArtifactTarget
-      - DcimGenericDevice
-      - DcimPhysicalDevice
+      - "CoreArtifactTarget"
+      - "DcimGenericDevice"
+      - "DcimPhysicalDevice"
     attributes:
       - name: role
         kind: Dropdown
@@ -421,22 +426,7 @@ nodes:
         kind: Text
         enum: ["Access", "Trunk", "Tunnel"]
         order_weight: 1250
-    relationships:
-      - name: untagged_vlan
-        label: Untagged VLAN
-        peer: IpamVLAN
-        optional: true
-        cardinality: one
-        kind: Component
-        identifier: interface_l2__untagged_vlan
-      - name: tagged_vlan
-        label: Tagged VLANs
-        peer: IpamVLAN
-        optional: true
-        cardinality: many
-        kind: Component
-        identifier: interface_l2__tagged_vlan
-  - name: Cable #TODO: Put more body to this one
+  - name: Cable # TODO: Put more body to this one
     namespace: Dcim
     description: "Cable connecting two endpoints"
     include_in_menu: true
