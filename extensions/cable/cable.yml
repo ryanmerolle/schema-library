@@ -1,14 +1,17 @@
 # yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
 ---
 version: "1.0"
+
 nodes:
   - name: Cable
     namespace: Dcim
-    description: "Cable connecting two endpoints"
+    description: "Physical cable connecting two endpoints"
     include_in_menu: true
     menu_placement: "DcimDevice"
     label: "Cable"
-    icon: "mdi:server"
+    icon: mdi:cable-data
+    inherit_from:
+      - DcimConnector
     attributes:
       - name: status
         kind: Dropdown
@@ -25,27 +28,3 @@ nodes:
       - name: color
         optional: true
         kind: Color
-    relationships:
-      - name: endpoint_a
-        peer: DcimEndpoint
-        optional: true
-        cardinality: one
-        kind: Attribute
-        identifier: connected__endpoint__a
-      - name: endpoint_z
-        peer: DcimEndpoint
-        optional: true
-        cardinality: one
-        kind: Attribute
-        identifier: connected__endpoint__z
-
-extensions:
-  nodes:
-    - kind: DcimEndpoint
-      relationships:
-        - name: connected_cable
-          peer: DcimCable
-          optional: true
-          cardinality: one
-          kind: Attribute
-          identifier: connected__cable
