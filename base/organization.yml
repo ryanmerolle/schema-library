@@ -49,6 +49,7 @@ nodes:
         peer: DcimPlatform
         cardinality: many
         optional: true
+
   - name: Provider
     namespace: Organization
     description: Circuit or Location Provider
