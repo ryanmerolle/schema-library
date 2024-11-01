@@ -5,7 +5,6 @@ This schema extension contains Circuits and ways to connect them with your infra
 ## Nodes
 
 - Circuit
-- Endpoint
 
 ## Dependencies
 
