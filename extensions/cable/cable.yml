@@ -16,6 +16,7 @@ nodes:
       - name: status
         kind: Dropdown
         optional: true
+        order_weight: 1000
         choices:
           - name: connected
             label: Connected
@@ -25,6 +26,22 @@ nodes:
             label: Planned
             description: "In the process of being set up"
             color: "#ffff7f"
-      - name: color
+      - name: type
+        kind: Dropdown
         optional: true
+        order_weight: 1100
+        choices:
+          - name: multimode-fiber
+            label: Multimode Fiber
+          - name: singlemode-fiber
+            label: Singlemode Fiber
+          - name: copper
+            label: Copper
+      - name: color
         kind: Color
+        optional: true
+        order_weight: 1300
+      - name: label
+        kind: Text
+        optional: true
+        order_weight: 1200
