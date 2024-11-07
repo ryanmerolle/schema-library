@@ -3,12 +3,11 @@
 version: '1.0'
 
 nodes:
-  - name: Class
+  - name: Group
     namespace: User
-    description: "User class"
-    label: "User Class"
+    description: "User Group"
+    label: "User Groups"
     icon: "iconoir:group"
-    menu_placement: "UserName"
     display_labels:
       - name__value
     order_by:
@@ -16,39 +15,40 @@ nodes:
     uniqueness_constraints:
       - ["name__value"]
     human_friendly_id:
-      - name__value
-    include_in_menu: true
+      - "name__value"
     attributes:
       - name: name
         kind: Text
-        description: "The unique name of the user class"
         order_weight: 1000
+      - name: description
+        kind: Text
+        optional: true
+        order_weight: 1100
       - name: idle_timeout
-        kind: Number
         label: Idle Timeout (s)
-        description: "Idle timeout in seconds before the user session expires"
-        default_value: 300
-        order_weight: 1500
+        kind: Number
+        order_weight: 1300
       - name: permissions
         kind: Dropdown
         optional: false
-        order_weight: 1200
         choices:
           - name: admin
             description: "All rights on device."
-            color: "#A9CCE3"  # pastel blue
+            color: "#E6E6FA"  # lavender
           - name: operator
-            description: "Operator permissions with limited write access."
-            color: "#AED6F1"  # light blue
+            description: "Operator right on configuration."
+            color: "#E6E6FA"  # lavender
           - name: read-only
             description: "Read only right on configuration."
-            color: "#AFC7F2"  # pastel cornflower blue
+            color: "#E6E6FA"  # lavender
+        order_weight: 1200
 
-  - name: Name
+  - name: Account
     namespace: User
     description: "User login and authentication"
-    label: "User Name"
-    icon: "iconoir:group"
+    label: "User Account"
+    icon: "mdi:account-key"
+    include_in_menu: false
     display_labels:
       - name__value
     order_by:
@@ -56,9 +56,9 @@ nodes:
     uniqueness_constraints:
       - ["name__value"]
       - ["uid__value"]
+      - ["name__value", "full_name__value"]
     human_friendly_id:
-      - name__value
-    include_in_menu: true
+      - "name__value"
     attributes:
       - name: name
         label: Username
@@ -69,7 +69,7 @@ nodes:
       - name: full_name
         kind: Text
         optional: true
-        description: "Full name of the user"
+        description: "Full name of the account"
         order_weight: 1100
       - name: ssh_key
         kind: Password
@@ -87,16 +87,16 @@ nodes:
         description: "Whether multi-factor authentication is enabled"
         order_weight: 1500
     relationships:
-      - name: user_class
-        peer: UserClass
+      - name: user_group
+        peer: UserGroup
         cardinality: one
         optional: false
         kind: Attribute
         order_weight: 1200
       - name: organization
         peer: OrganizationGeneric
+        optional: false
         cardinality: one
-        optional: False
         kind: Parent
 
 extensions:
@@ -104,8 +104,8 @@ extensions:
     # Organization Extensions
     - kind: OrganizationGeneric
       relationships:
-        - name: users
+        - name: accounts
           kind: Component
-          peer: UserName
-          description: "List of users under this organization"
+          peer: UserAccount
+          description: "List of Accounts under this organization"
           cardinality: many

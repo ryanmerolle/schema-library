@@ -1,11 +1,11 @@
-# Users management schema extension
+# 🧩 Accounts management schema extension
 
-This schema extension contains models for Users management .
+This schema extension contains models for Accounts management.
 
 ## Nodes
 
-- UserName
-- UserClass
+- UserAccount
+- UserGroup
 
 ## Generics
 
