@@ -129,7 +129,7 @@ nodes:
       - name: color
         kind: Dropdown
         optional: true
-        order_weight: 1100
+        order_weight: 1300
         choices:
           - name: dark-red
             label: Dark Red
@@ -213,3 +213,9 @@ nodes:
         kind: Text
         optional: true
         order_weight: 1200
+      # As we can't put float in Number "forcing" legnth in cm
+      - name: length
+        label: Length (in cm)
+        kind: Number
+        optional: true
+        order_weight: 1350
