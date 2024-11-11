@@ -32,6 +32,7 @@ jobs:
           filters: .github/file-filters.yml
 
   yaml-lint:
+    name: Run yaml lint
     if: needs.files-changed.outputs.yaml == 'true'
     needs: ["files-changed"]
     runs-on: "ubuntu-latest"
@@ -44,7 +45,9 @@ jobs:
       - name: "Linting: yamllint"
         run: "yamllint -s ."
 
-  E2E-testing-invoke-start:
+  # FIXME: This should be triggered only when some YAML schema changes...
+  schema-test:
+    name: Test all schema files
     needs:
       - files-changed
       - yaml-lint
@@ -91,9 +94,8 @@ jobs:
       - name: Test base schema files
         run: invoke load-schema-base
 
-      # NOTE: Doesn't work now
-      # - name: Test experimental schema files
-      #   run: invoke load-schema-experimental
+      - name: Test extensions schema files
+        run: invoke load-schema-extensions
 
       - name: "Clear docker environment and force vmagent to stop"
         if: always()
