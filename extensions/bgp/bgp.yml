@@ -98,7 +98,7 @@ nodes:
     display_labels:
       - description__value
     attributes:
-      - name: type
+      - name: session_type
         kind: Text
         enum:
           - EXTERNAL
