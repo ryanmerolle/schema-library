@@ -24,7 +24,7 @@ nodes:
       - name: description
         kind: Text
         optional: true
-      - name: type
+      - name: circuit_type
         kind: Dropdown
         description: Specifies the type of circuit.
         choices:
