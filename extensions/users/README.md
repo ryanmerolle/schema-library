@@ -1,4 +1,4 @@
-# 🧩 Accounts management schema extension
+# 🧩 Accounts management
 
 This schema extension contains models for Accounts management.
 
