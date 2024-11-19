@@ -62,7 +62,7 @@ generics:
 
   - name: GenericModuleType
     namespace: Device
-    description: "A generic module type, such as a Linecard or Routing Engine, with common specifications like part number and manufacturer."
+    description: "A generic module type, with common specifications like part number and manufacturer."
     label: "Module Type"
     uniqueness_constraints:
       - ["part_number__value"]
