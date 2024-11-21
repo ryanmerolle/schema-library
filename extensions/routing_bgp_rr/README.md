@@ -1,0 +1,13 @@
+# 🧩 BGP
+
+This schema extension extemd the BGP extension to add BGP Route Reflector Clustering.
+
+## Nodes
+
+- BGPRRCluster
+
+## Dependencies
+
+- Base (need by BGP)
+- Routing (need by BGP)
+- BGP

@@ -11,3 +11,4 @@ This schema extension contains all you need to model your BGP platform
 ## Dependencies
 
 - Base
+- Routing
