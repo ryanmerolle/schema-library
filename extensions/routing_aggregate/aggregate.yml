@@ -32,10 +32,3 @@ nodes:
         peer: IpamPrefix
         description: "Destination network for the static route."
         order_weight: 1200
-      # - name: bgp_communities
-      #   label: BGP Communities
-      #   peer: RoutingBGPCommunity
-      #   optional: true
-      #   cardinality: many
-      #   kind: Attribute
-      #   order_weight: 1300

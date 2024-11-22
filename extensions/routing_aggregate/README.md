@@ -4,7 +4,7 @@ This schema extension contains all you need to model the Aggregate Routing Proto
 
 ## Nodes
 
-- AggregateRoute
+- RoutingAggregateRoute
 
 ## Dependencies
 

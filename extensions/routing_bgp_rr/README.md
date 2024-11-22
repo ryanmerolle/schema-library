@@ -4,7 +4,7 @@ This schema extension extemd the BGP extension to add BGP Route Reflector Cluste
 
 ## Nodes
 
-- BGPRRCluster
+- RoutingBGPRRCluster
 
 ## Dependencies
 

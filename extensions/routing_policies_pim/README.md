@@ -6,6 +6,8 @@ This extension is using the Routing Policies extensions and the Routing PIM one 
 
 ## Nodes
 
+- RoutingPolicyPIM
+
 ## Extension
 
 - Removes Attributes import_policies and export_policies from PIM

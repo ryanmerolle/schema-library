@@ -3,7 +3,6 @@
 version: "1.0"
 
 nodes:
-
   - name: PIM
     namespace: Routing
     description: "Protocol Independent Multicast (PIM) instance on a Virtual Router."

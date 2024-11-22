@@ -11,7 +11,6 @@ This Generic can be extend for each Routing Protocols you may want to use.
 
 ## Nodes
 
-
 ## Dependencies
 
 - Base
