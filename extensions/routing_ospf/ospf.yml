@@ -113,7 +113,7 @@ nodes:
         order_weight: 1300
       - name: authentication_key
         kind: Password
-        description: "OSPF area associated with the interface."
+        description: "Shared secret used to authenticate and secure routing messages between neighboring routers."
         optional: true
         order_weight: 1250
       - name: authentication_mode
