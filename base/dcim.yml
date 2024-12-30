@@ -268,13 +268,19 @@ nodes:
         optional: true
         order_weight: 1700
       - name: ansible_network_os
+        label: Ansible Network OS
         kind: Text
         optional: true
         order_weight: 1800
-      - name: containerlab_os
+      - name: scrapli_platform
         kind: Text
         optional: true
         order_weight: 1900
+      - name: containerlab_os
+        label: ContainerLab OS
+        kind: Text
+        optional: true
+        order_weight: 2000
     relationships:
       - name: devices
         peer: DcimGenericDevice
